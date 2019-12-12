@@ -6,4 +6,5 @@ For The Fibonacci algorithm written in 4 ways
   - Functional
   
 # Tests
-Created unit tests with JUnit and integrate Jenkins CI for build and testing
+- Created unit tests with JUnit for each fibonacci
+- Integrated Jenkins CI for gradle build and testing
