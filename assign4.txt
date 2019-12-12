@@ -1,0 +1,103 @@
+Assign4: Due 11:59PM November 8
+
+The Fibonacci series of numbers start with 1, 1, 2, 3, 5, 8, 13, 21, ...
+where values at position 0 and 1 are 1, and values at each position after
+that are a sum of values at the previous two positions.
+
+Write four implementations of a function to compute the Fibonacci number at a given position.
+
+Please start with one implementation at a time rather than rushing through all
+of them at the same time.
+
+The four implementations are described below:
+
+1. An imperative iteration. 
+  Given a position n, loop through totaling values until you reach the value for the given position.
+
+2. A functional iteration. 
+	  Given a position n, loop through totaling values until you reach the value for the given position. Avoid explicit mutability.
+
+3. A simple recursion.
+  Given a position, compute the value at a position using the expression fib(n-1) + fib(n-2).
+
+4. A memoized recursion.
+  Given a position, look up to see if the value has been precomputed and if so return that value. Otherwise, use recursion to compute the value.
+  
+Confirms that the memoized version is faster than the recursive version.
+
+Reuse as much code as possible.
+
+Please bring forward the practices, techniques, and tools you have learned so far. This includes: 
+Good code quality
+Lightweight design
+Minimum code
+Automated testing                                                         
+Code coverage
+Continuous integration
+
+Once you complete coding, please answer the following:
+
+1. What design principles did you use in this assignment? Discuss.
+
+DRY (Don't Repeat Yourself) was a principle we adhered to throughout the assignment.
+In every Fibonacci implementation we had to check if the position was less
+than zero. In order to adhere to DRY, we delegated that functionality to a method
+they could all call. Another example where we adhered to DRY, was that we knew Both
+MemoizedFibonacci and RecursiveFibonacci use recursion. Therefore, we extended the
+RecursiveFibonacci implementation to MemoizedFibonacci and called the recursive
+method.
+
+YAGNI (You Aren't Gonna Need It) was what we followed as well. Initial part of the
+assignment we implemented an interface for each Fibonacci implementation to
+implement. However, we were initially tasked to do one implementation because there
+were no other classes that implemented the interface, therefore it was not needed
+until we had more than one implementation of Fibonacci created. 
+
+The next design principles we used were intertwined with one another, those would be
+SRP (Single Responsibility Principle) and Open Closed Principle (OCP). After
+finishing creating the first implementation of the Fibonacci class, we decided
+to implement a second implementation of Fibonacci as another static method of the
+Fibonacci class. This unfortunately violated SRP, because its function involved more
+than one task to achieve. This in turn also violated OCP, because if we had to add
+new feature, we would have to change the class, rather than extended.
+
+2. Any surprises or things that you did not expect?
+
+We did not realize that using abstract classes could also be used for writing Junit
+tests. We ended up using abstract factory design pattern for that since all
+implementations shared the same tests. 
+
+Additionally some other things we learned were about features in the java stream
+library. We learned that within the Stream library they had things such as
+LongStream or IntStream that also had support for things that are found in other
+languages like Python's range. 
+
+3. What design patterns did you use in this assignment? Discuss.
+
+The design pattern we used was Factory Method Pattern. We realized that for all
+implementation Fibonacci will fundamentally have the same tests to verify
+the implementations were correctly mapping the positions to the
+Fibonacci numbers. The only thing that would be different is the implementation
+itself. Because all these implementations implement the same interface, we can
+simply write an abstract class that has these same tests but then have an abstract
+method that is responsible for instantiating the Fibonacci object. The classes that
+inherit this abstract class would then be responsible for implementing the method
+that creates the fibonacci object to be tested. This is also an example of the
+DRY principle. 
+
+We also encountered the cascade design pattern when implementing the functional
+style of fibonacci because Java Stream's api which we used to iterate over
+a sequence is designed using the Cascade pattern. There streams are implemented
+so that the user can simply method-chain actions that occur to elements in a stream. 
+This is elegant because it visually parallels the notion of a stream. 
+
+Total [100]: 100
+All tests pass [10]:
+Test quality [10]:
+Code Coverage [10]:        
+Functional solution [10]:
+Memoized solution and reuse [20]:
+Design quality [10]:
+Code quality [10]:
+Performance test [10]:
+Response to questions [10]:

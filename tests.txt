@@ -1,0 +1,41 @@
+x imperative Fibonacci throws and IllegalArgumentException
+    when a negative number is supplied
+x imperative Fibonacci returns 1 when 0 is provided
+x imperative Fibonacci returns 1 when 1 is provided
+x imperative Fibonacci returns 2 when 2 is provided
+x imperative Fibonacci returns 3 when 3 is provided
+x imperative Fibonacci returns 5 when 4 is provided
+x imperative Fibonacci returns 8 when 5 is provided
+x imperative Fibonacci returns 514229 when 28 is provided
+
+x functional Fibonacci throws and IllegalArgumentException
+    when a negative number is supplied
+x functional Fibonacci returns 1 when 0 is provided
+x functional Fibonacci returns 1 when 1 is provided
+x functional Fibonacci returns 2 when 2 is provided
+x functional Fibonacci returns 3 when 3 is provided
+x functional Fibonacci returns 5 when 4 is provided
+x functional Fibonacci returns 8 when 5 is provided
+x functional Fibonacci returns 514229 when 28 is provided
+
+x memoized Fibonacci throws and IllegalArgumentException
+    when a negative number is supplied
+x memoized Fibonacci returns 1 when 0 is provided
+x memoized Fibonacci returns 1 when 1 is provided
+x memoized Fibonacci returns 2 when 2 is provided
+x memoized Fibonacci returns 3 when 3 is provided
+x memoized Fibonacci returns 5 when 4 is provided
+x memoized Fibonacci returns 8 when 5 is provided
+x memoized Fibonacci returns 514229 when 28 is provided
+ 
+x recursive Fibonacci throws and IllegalArgumentException
+    when a negative number is supplied
+x recursive Fibonacci returns 1 when 0 is provided
+x recursive Fibonacci returns 1 when 1 is provided
+x recursive Fibonacci returns 2 when 2 is provided
+x recursive Fibonacci returns 3 when 3 is provided
+x recursive Fibonacci returns 5 when 4 is provided
+x recursive Fibonacci returns 8 when 5 is provided
+x recursive Fibonacci returns 514229 when 28 is provided
+
+x memoized Fibonacci faster than recursive fibonacci

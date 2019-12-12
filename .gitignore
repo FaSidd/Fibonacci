@@ -1,6 +1,6 @@
 fibonacci/out/*
 fibonacci/.idea/*
-.gradle
+.gradle/
 build/
 # Compiled class file
 *.class
